@@ -6,7 +6,7 @@
 
 A clean, modern, minimalist developer portfolio website for **Piyush Kalra** — Data Analyst Intern & Hardware Research Engineer.
 
-Built strictly from Piyush Kalra's resume as the single source of truth.
+Built strictly from my resume as the single source of truth.
 
 ---
 
