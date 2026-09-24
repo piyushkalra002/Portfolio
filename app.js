@@ -7,35 +7,46 @@ const SKILLS_DATA = [
   // Languages
   { name: 'Python', category: 'lang', icon: 'code-2', level: 'Core Language' },
   { name: 'SQL', category: 'lang', icon: 'database', level: 'Core Language' },
+  { name: 'C', category: 'lang', icon: 'terminal', level: 'Procedural Language' },
   { name: 'C++', category: 'lang', icon: 'cpu', level: 'Systems Language' },
-  { name: 'C', category: 'lang', icon: 'terminal', level: 'Low-level / Embedded' },
 
-  // Data Analytics & Engineering
-  { name: 'Power BI', category: 'analytics', icon: 'bar-chart-2', level: 'Visualization & Dashboards' },
-  { name: 'Excel', category: 'analytics', icon: 'sheet', level: 'Financial & Data Analysis' },
-  { name: 'Pandas', category: 'analytics', icon: 'binary', level: 'Data Wrangling & RFM' },
-  { name: 'SQLite / MySQL', category: 'analytics', icon: 'table', level: 'Star Schema & ETL' },
-  { name: 'ETL Pipelines', category: 'analytics', icon: 'git-merge', level: 'Pipeline Automation' },
-  { name: 'Financial Analysis', category: 'analytics', icon: 'trending-up', level: 'CAGR, Sharpe, VaR' },
-  { name: 'Statistical Reasoning', category: 'analytics', icon: 'calculator', level: 'EDA & Correlation' },
-  { name: 'Data Cleaning', category: 'analytics', icon: 'sparkles', level: 'Reconciliation & QA' },
+  // AI & Machine Learning
+  { name: 'Machine Learning', category: 'aiml', icon: 'brain', level: 'Supervised Learning' },
+  { name: 'YOLOv8', category: 'aiml', icon: 'eye', level: 'Object Detection' },
+  { name: 'OpenCV', category: 'aiml', icon: 'camera', level: 'Computer Vision' },
+  { name: 'Model Training', category: 'aiml', icon: 'activity', level: 'Fine-Tuning & Evaluation' },
+  { name: 'Hyperparameter Tuning', category: 'aiml', icon: 'sliders', level: 'Optimization' },
 
-  // Hardware & Circuit Design
-  { name: 'Dual Op-Amp Circuits', category: 'hardware', icon: 'activity', level: 'Signal Chain (×2,200 Gain)' },
-  { name: 'EasyEDA PCB Layout', category: 'hardware', icon: 'layers', level: '9V Battery Form Factor' },
-  { name: 'EMI Detection', category: 'hardware', icon: 'radio', level: '50 Hz - 3 MHz Frequency' },
-  { name: 'Multimeter Testing', category: 'hardware', icon: 'zap', level: '±5V Node Diagnostics' },
+  // Data & Analytics
+  { name: 'Pandas', category: 'analytics', icon: 'binary', level: 'Data Wrangling' },
+  { name: 'NumPy', category: 'analytics', icon: 'calculator', level: 'Numerical Computing' },
+  { name: 'EDA', category: 'analytics', icon: 'pie-chart', level: 'Exploratory Analysis' },
+  { name: 'Statistical Analysis', category: 'analytics', icon: 'trending-up', level: 'Hypothesis & Metrics' },
+  { name: 'Power BI', category: 'analytics', icon: 'bar-chart-2', level: 'Dashboards & BI' },
+  { name: 'Excel', category: 'analytics', icon: 'sheet', level: 'Spreadsheets & Analytics' },
 
-  // Developer Tools
+  // Data Engineering
+  { name: 'ETL', category: 'de', icon: 'git-merge', level: 'Pipeline Transformation' },
+  { name: 'Data Pipelines', category: 'de', icon: 'workflow', level: 'Automation & Processing' },
+  { name: 'Data Modeling', category: 'de', icon: 'network', level: 'Star Schema & Design' },
+  { name: 'Data Cleaning', category: 'de', icon: 'sparkles', level: 'Quality & Standardization' },
+  { name: 'Data Validation', category: 'de', icon: 'check-circle-2', level: 'Reconciliation & QA' },
+  { name: 'APIs', category: 'de', icon: 'link-2', level: 'REST & Integrations' },
+  { name: 'PySpark', category: 'de', icon: 'zap', level: 'Distributed Processing' },
+
+  // Cloud & Databases
+  { name: 'AWS S3', category: 'cloud', icon: 'hard-drive', level: 'Cloud Object Storage' },
+  { name: 'AWS Glue', category: 'cloud', icon: 'layers', level: 'Serverless ETL' },
+  { name: 'Amazon Athena', category: 'cloud', icon: 'search', level: 'Serverless SQL' },
+  { name: 'MySQL', category: 'cloud', icon: 'server', level: 'Relational Database' },
+  { name: 'SQLite', category: 'cloud', icon: 'table', level: 'Embedded RDBMS' },
+  { name: 'RDBMS', category: 'cloud', icon: 'database', level: 'Database Design' },
+
+  // Tools
+  { name: 'Git', category: 'tools', icon: 'git-branch', level: 'Version Control' },
+  { name: 'GitHub', category: 'tools', icon: 'github', level: 'Collaboration & CI' },
   { name: 'VS Code', category: 'tools', icon: 'file-code', level: 'IDE' },
-  { name: 'Git / GitHub', category: 'tools', icon: 'git-branch', level: 'Version Control' },
-  { name: 'MySQL Workbench', category: 'tools', icon: 'server', level: 'Database Administration' },
-
-  // Soft Skills & Leadership
-  { name: 'Leadership', category: 'soft', icon: 'shield-check', level: '150+ Team Management' },
-  { name: 'Time Management', category: 'soft', icon: 'clock', level: 'Concurrent Workstreams' },
-  { name: 'Communication', category: 'soft', icon: 'message-square', level: '3,000+ Audience Anchor' },
-  { name: 'Ownership & Adaptability', category: 'soft', icon: 'compass', level: 'End-to-end Execution' }
+  { name: 'Jupyter Notebook', category: 'tools', icon: 'book-open', level: 'Interactive Analytics' }
 ];
 
 // Resume Verbatim Text for Modal
@@ -45,10 +56,18 @@ const RESUME_TEXT = `
    +91 6239729240 | kalrapiyush21@gmail.com | linkedin.com/in/kalrapiyushh | github.com/piyushkalra002
 ===============================================================================
 
+POSITIONING
+-------------------------------------------------------------------------------
+AI/ML • Data Engineering • Analytics
+Final-year ECE student building AI systems, data pipelines, and data-driven solutions.
+
 EDUCATION
 -------------------------------------------------------------------------------
 Thapar Institute of Engineering and Technology                  Patiala, Punjab
-B.E. in Electronics and Communication Engineering              Aug 2023 - Present
+B.E. in Electronics and Communication Engineering              Aug 2023 - May 2027
+Minor in Finance
+Relevant Coursework: Finance, Accounting & Valuation, Financial Markets & 
+Portfolio Theory, Derivatives Pricing, Trading & Strategies
 
 Shiv Jyoti Public School                                     Jalandhar, Punjab
 Senior Secondary (CBSE): 96.0% | Higher Secondary (CBSE): 81.2%  Aug 2021 - 2023
@@ -56,17 +75,16 @@ Senior Secondary (CBSE): 96.0% | Higher Secondary (CBSE): 81.2%  Aug 2021 - 2023
 
 EXPERIENCE
 -------------------------------------------------------------------------------
-Data Analyst Intern                                                         2026
-Bluestock Fintech                                                         Remote
-• Led a 3-person team to build a Mutual Fund Analytics Platform, personally owning 
-  schema design and query development (6-table SQLite star schema, 10 SQL queries, 
-  ETL pipeline from raw files) while directing teammates on supporting analysis.
-• Presented a composite scorecard ranking and recommending funds to stakeholders, 
-  built on CAGR, Sharpe/Sortino ratios, Alpha/Beta vs. Nifty 100, Max Drawdown, and Value at Risk.
-• Ran EDA across 11+ visualizations and personally identified and fixed data pipeline 
-  bugs affecting output accuracy.
+Data Analyst Intern                                      June 2026 – August 2026
+Bluestock Fintech                                                 Pune, India
+• Coordinated a 3-person team to build a Mutual Fund Analytics Platform covering 
+  40 schemes, 5,000 investors, and 32,778 transactions worth INR 352+ crore, 
+  translating business requirements into actionable financial insights.
+• Built and validated an ETL and SQL analysis pipeline for 46K+ NAV records, using 
+  data-quality checks and comparative analysis to identify performance drivers 
+  and support business recommendations.
 
-Research Intern - R&D, Hardware & Circuit Design                            2026
+Research Intern – R&D, Hardware & Circuit Design         Jan 2026 – May 2026
 Dr. B.R. Ambedkar National Institute of Technology              Jalandhar, Punjab
 • Built a full-spectrum EMI Detector from scratch using a dual op-amp signal chain with 
   variable gain up to ×2,200, driving a buzzer and LED output across 50 Hz to 3 MHz.
@@ -78,42 +96,46 @@ Dr. B.R. Ambedkar National Institute of Technology              Jalandhar, Punja
 
 PROJECTS
 -------------------------------------------------------------------------------
-Customer Retention & RFM Analysis | Python, Pandas, SQL, Power BI
-• Identified £1.03M (11.8%) of revenue concentrated in at-risk customers, matching 
-  loyal-segment value, by segmenting 4,300+ customers via SQL extraction and Python 
-  RFM scoring, validated against independent queries.
-• Recommended a targeted win-back strategy delivering 2.4–2.5x better ROI than a 
-  blanket approach, stress-tested across 9 cost/reactivation scenarios.
+Real-Time Facial Emotion Recognition | Python, YOLOv8, OpenCV
+• Fine-tuned YOLOv8n on 4,540 labeled facial images across 4 emotion classes, achieving 
+  93.4% mAP@50, 90.8% precision, and 90.2% recall on 892 validation images. Built a 
+  real-time OpenCV inference pipeline running at 15 FPS on CPU.
 
-Blinkit Sales Pipeline & Reporting Automation | Python, SQL, Power BI
-• Built and validated an 8-table MySQL schema from 100K+ records, resolving a 
-  duplicated timing column and a revenue total unreconciled in 99.98% of orders.
-• Ruled out distance, delivery partner, and delay as satisfaction drivers via SQL 
-  (correlation = 0.004; 32-34% negative reviews regardless of delay status), and 
-  corrected a flawed ROAS metric to identify Email as top marketing channel (2.05x vs 1.92x).
+Cloud-Based E-Commerce Data Pipeline | AWS S3, AWS Glue, PySpark, Athena, IAM
+• Built an end-to-end AWS data pipeline processing 100K+ e-commerce records from 
+  Amazon S3 through AWS Glue and PySpark, transforming data into Parquet format 
+  for efficient querying and analysis through Amazon Athena.
+
+Customer Retention & RFM Analysis | Python, SQL, Power BI
+• Analyzed 4,300+ customers using RFM analysis and identified £1.03M in at-risk revenue, 
+  representing 11.8% of total revenue. Built a targeted customer win-back business case 
+  and stress-tested ROI across 9 scenarios.
 
 
 TECHNICAL SKILLS
 -------------------------------------------------------------------------------
-Languages: C, C++, Python, SQL
-Developer Tools: VS Code, MySQL, Git/GitHub, EasyEDA
-Data analytics: Power BI, Excel, Pandas
-Core Skills: Data Cleaning, Data Visualization, Financial Analysis, SQL Querying, 
-             Process Optimization, Statistical reasoning, Circuit Design, PCB Layout
-Soft Skills: Leadership, Time Management, Communication, Ownership, Adaptability
+Languages: Python, SQL, C, C++
+AI & Machine Learning: Machine Learning, YOLOv8, OpenCV, Model Training, Hyperparameter Tuning
+Data & Analytics: Pandas, NumPy, EDA, Statistical Analysis, Power BI, Excel
+Data Engineering: ETL, Data Pipelines, Data Modeling, Data Cleaning, Data Validation, APIs, PySpark
+Cloud & Databases: AWS S3, AWS Glue, Amazon Athena, MySQL, SQLite, RDBMS
+Tools: Git, GitHub, VS Code, Jupyter Notebook
 
 
 POSITIONS OF RESPONSIBILITY
 -------------------------------------------------------------------------------
-Mudra Society | Core Convener, Performances and Logistics       Aug 2025 - Present
+Mudra Society | Cultural Secretary                             Aug 2026 – Present
 Thapar Institute of Engineering and Technology
-• Managed large-scale events (Mudranite 2024, Izhaar 2025) with a combined attendance exceeding 5,000.
-• Led 150+ students across performances and logistics; coordinated budgets, vendor negotiations.
+• Lead large-scale cultural events with 5,000+ attendees, coordinating 150+ 
+  students across teams, timelines, and workstreams.
+• Manage budgets, vendor negotiations, stakeholder communication, and event execution.
 
-Saturnalia Fest | Event Management and Outreach Head           Nov 2025 - Present
+Saturnalia Fest | Event Management and Outreach Head           Nov 2025 – Aug 2026
 Thapar Institute of Engineering and Technology
-• Directed end-to-end event operations across multiple concurrent workstreams in North India’s Largest Fest.
-• Anchored live events before audiences of 3,000+ students.
+• Coordinated teams and event operations across multiple workstreams for a large-scale 
+  techno-cultural festival.
+• Anchored live events before audiences of 3,000+ students, developing strong presentation 
+  and audience engagement skills.
 `;
 
 // Initialize Application
@@ -251,7 +273,6 @@ function setupNavigation() {
 // Copy email action with toast notification
 function setupContactCopy() {
   const copyBtn = document.getElementById('copy-email-btn');
-  const toast = document.getElementById('toast');
 
   if (copyBtn) {
     copyBtn.addEventListener('click', () => {

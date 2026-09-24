@@ -715,6 +715,92 @@ section {
   font-family: var(--font-mono);
 }
 
+/* Architecture Visual Flow for Data Pipeline */
+.arch-flow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: rgba(129, 140, 248, 0.08);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  color: #e2e8f0;
+  margin-bottom: 16px;
+}
+
+.arch-step {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.arch-arrow {
+  color: var(--text-dim);
+  width: 14px;
+  height: 14px;
+}
+
+/* Coming Soon Badge */
+.badge-coming-soon {
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Currently Interested In Section */
+.interest-section {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.interest-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.interest-title svg {
+  width: 16px;
+  height: 16px;
+}
+
+.interest-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.interest-badge {
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: var(--transition-normal);
+}
+
+.interest-badge:hover {
+  border-color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.08);
+  color: var(--accent-cyan);
+}
+
 /* Positions of Responsibility */
 .positions-grid {
   display: grid;
